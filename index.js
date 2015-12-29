@@ -23,7 +23,9 @@ function virtualMarkdown (markdown, opts) {
 
 function loadPlugins (plugins) {
   return plugins.reduce(function (processor, plugin) {
-    plugin = Array.isArray(plugin) ? plugin[0](plugin[1] || {}) : plugin
+    if (Array.isArray(plugin)) {
+      return processor.use(plugin[0], plugin[1])
+    }
     return processor.use(plugin)
   }, remark())
 }
