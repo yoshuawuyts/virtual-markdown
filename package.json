@@ -1,0 +1,45 @@
+{
+  "name": "virtual-markdown",
+  "version": "1.0.0",
+  "description": "Convert markdown into virtual-dom",
+  "main": "index.js",
+  "scripts": {
+    "deps": "dependency-check . && dependency-check . --extra --no-dev",
+    "test": "standard && npm run deps && NODE_ENV=test node test",
+    "test:cov": "standard && npm run deps && NODE_ENV=test istanbul cover test.js"
+  },
+  "repository": "yoshuawuyts/virtual-markdown",
+  "keywords": [
+    "virtual",
+    "dom",
+    "markdown",
+    "remark",
+    "mdast",
+    "markdown",
+    "md",
+    "componenent",
+    "element",
+    "server",
+    "render",
+    "SSR",
+    "simple"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "remark": "^3.0.1",
+    "remark-html": "^2.0.2",
+    "virtual-html": "^1.3.0"
+  },
+  "devDependencies": {
+    "dependency-check": "^2.5.1",
+    "istanbul": "^0.4.1",
+    "remark-slug": "^3.0.1",
+    "standard": "^5.4.1",
+    "tape": "^4.4.0",
+    "vdom-to-html": "^2.2.0"
+  },
+  "files": [
+    "index.js",
+    "bin/*"
+  ]
+}
