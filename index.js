@@ -1,5 +1,4 @@
-const virtualHtml = require('virtual-html')
-const remarkHtml = require('remark-html')
+const toVdom = require('remark-vdom')
 const remark = require('remark')
 const assert = require('assert')
 
@@ -15,10 +14,10 @@ function virtualMarkdown (markdown, opts) {
 
   opts.use = opts.use || []
   const plugins = Array.isArray(opts.use) ? opts.use : [ opts.use ]
-  plugins.unshift(remarkHtml)
+  plugins.push(toVdom)
   const processor = loadPlugins(plugins)
 
-  return virtualHtml(processor.process(markdown))
+  return processor.process(markdown)
 }
 
 function loadPlugins (plugins) {
