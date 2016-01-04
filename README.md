@@ -40,6 +40,7 @@ following options:
 - all other options are passed directy to [remark.process()][16]
 
 ## See Also
+- [remark-vdom][18]
 - [virtual-widget][12]
 - [virtual-dom][13]
 - [remark][14]
@@ -65,3 +66,4 @@ following options:
 [15]: https://github.com/wooorm/remark/blob/master/doc/plugins.md
 [16]: https://github.com/wooorm/remark#remarkprocessvalue-options-done
 [17]: https://github.com/wooorm/remark-html
+[18]: https://github.com/wooorm/remark-vdom
