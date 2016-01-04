@@ -3,7 +3,7 @@
 [![downloads][8]][9] [![js-standard-style][10]][11]
 
 Convert markdown into [virtual-dom][13]. Uses [remark][14] and
-[remark-html][17] under the hood.
+[remark-vdom][18] under the hood.
 
 ## Installation
 ```sh
